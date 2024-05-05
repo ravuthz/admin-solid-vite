@@ -1,13 +1,13 @@
 import { createSignal } from "solid-js";
 
-import solidLogo from "./assets/solid.svg";
 import viteLogo from "/vite.svg";
+import solidLogo from "./assets/solid.svg";
 
 function App() {
   const [count, setCount] = createSignal(0);
 
   return (
-    <div class="container mx-auto">
+    <div data-testid="App" class="container mx-auto">
       <div class="flex flex-col justify-center items-center mt-10">
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} class="logo" alt="Vite logo" />

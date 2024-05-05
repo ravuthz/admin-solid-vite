@@ -10,14 +10,36 @@ $ npm install # or pnpm install or yarn install
 
 In the project directory, you can run:
 
-### `npm run dev`
+### Runs the app in the development mode
 
-Runs the app in the development mode.<br>
+`npm run dev`
+`bun run dev`
+
 Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
-### `npm run build`
+### Testing
 
-Builds the app for production to the `dist` folder.<br>
+`npm run test`
+`bun run test`
+
+### Testing UI
+
+`npm run test:ui`
+`bun run test:ui`
+
+### Testing coverage report
+
+`npm run test:coverage`
+`bun run test:coverage`
+
+"test:reports"
+
+### Builds the app for production
+
+`npm run build`
+`bun run build`
+
+Build to the `dist` folder.
 It correctly bundles Solid in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br>

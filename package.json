@@ -6,12 +6,24 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui --coverage",
+    "test:coverage": "vitest run --coverage",
+    "test:reports": "npx vite preview --outDir dist/tests/reports --open"
   },
   "dependencies": {
-    "solid-js": "^1.7.8"
+    "@solidjs/testing-library": "^0.8.7",
+    "@testing-library/jest-dom": "^6.4.5",
+    "jsdom": "^24.0.0",
+    "solid-js": "^1.7.8",
+    "vitest": "^1.6.0"
   },
   "devDependencies": {
+    "@types/jsdom": "^21.1.6",
+    "@types/testing-library__jest-dom": "^6.0.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/ui": "^1.6.0",
     "autoprefixer": "^10.4.19",
     "daisyui": "latest",
     "postcss": "^8.4.38",
