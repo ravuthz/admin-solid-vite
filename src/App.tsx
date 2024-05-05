@@ -1,14 +1,14 @@
-import { createSignal } from 'solid-js'
-import solidLogo from './assets/solid.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { createSignal } from "solid-js";
+
+import solidLogo from "./assets/solid.svg";
+import viteLogo from "/vite.svg";
 
 function App() {
-  const [count, setCount] = createSignal(0)
+  const [count, setCount] = createSignal(0);
 
   return (
-    <>
-      <div>
+    <div class="container mx-auto">
+      <div class="flex flex-col justify-center items-center mt-10">
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} class="logo" alt="Vite logo" />
         </a>
@@ -16,20 +16,25 @@ function App() {
           <img src={solidLogo} class="logo solid" alt="Solid logo" />
         </a>
       </div>
-      <h1>Vite + Solid</h1>
-      <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+      <div class="flex flex-col justify-center items-center">
+        <h1 class="text-3xl font-bold my-5">Vite + Solid</h1>
+        <button
+          class="g-blue-500 bg-blue-500 hover:bg-blue-300 text-white font-bold py-2 px-4 rounded"
+          onClick={() => setCount((count) => count + 1)}
+        >
           count is {count()}
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <div class="mt-5 flex flex-col justify-center items-center">
+          <p>
+            Edit <code>src/App.tsx</code> and save to test HMR
+          </p>
+          <p class="read-the-docs">
+            Click on the Vite and Solid logos to learn more
+          </p>
+        </div>
       </div>
-      <p class="read-the-docs">
-        Click on the Vite and Solid logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
